@@ -2,24 +2,37 @@
     width: 400px;
     height: 600px;
     border: solid black 1px;
-    background: gainsboro;
+    background: repeating-linear-gradient(90deg, grey, #7e6e6e 50px);
     margin-left: 400px;
+    border-radius: 20px;
 }
 #display{
+    font-family: cursive;
     height: 85px;
     margin: 20px;
     border: solid 2px;
     background: beige;
+    font-size: 25px;
+    text-align: right;
 }
 .btn{
     width: 83px;
     height: 70px;
     font-size: x-large;
+    cursor: pointer;
+    border-radius: 20px;
+
 }
 .letters{
     margin-left: 30px;
     margin-top: 11px;
+    
 }
 .keys{
     margin-top: 30px;
+   
+}
+.full{
+    background: blanchedalmond;
+    margin: 0px;
 }

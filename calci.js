@@ -1,5 +1,5 @@
 const calci={
-    symbols: ['+','-','/','*','='],
+    symbols: ['+','-','*','/'],
     
     memmory:[],
 
@@ -9,7 +9,7 @@ const calci={
         document.getElementById("display").innerHTML += numb;
         this.screenMemmory += ''+numb;
         document.getElementById("display").innerHTML = this.screenMemmory;
-        console.log("this",this.screenMemmory)
+        
     },
 
     btnsym: function(symbol){
@@ -17,14 +17,44 @@ const calci={
         this.memmory.push(this.screenMemmory);
         this.memmory.push(symbol);
         this.screenMemmory='';
-        console.log("screen memmory now",this.screenMemmory)
-        console.log("memmory",this.memmory)
+        
     },
 
     clear : function(){
         this.memmory = [];
         this.screenMemmory = '';
         document.getElementById("display").innerHTML = "";
-        console.log("cleared")
+        
+    },
+    result : function(){
+        this.memmory.push(this.screenMemmory);
+        let len=this.memmory.length;
+        for(i=0;i<len;i++){
+            if(this.memmory[i]===this.symbols[0]){
+               let results =Number(this.memmory[i-1]) + Number(this.memmory[i+1]);
+               document.getElementById("display").innerHTML = results;
+               this.screenMemmory=results;
+               this.memmory.push(results);
+            }
+            else if(this.memmory[i]===this.symbols[1]){
+                let results = this.memmory[i-1]-this.memmory[i+1];
+                document.getElementById("display").innerHTML = results;
+                this.screenMemmory=results;
+                this.memmory.push(results);
+             }
+             else if(this.memmory[i]===this.symbols[2]){
+                let results = this.memmory[i-1]*this.memmory[i+1];
+                document.getElementById("display").innerHTML = results;
+                this.screenMemmory=results;
+                this.memmory.push(results);
+             }
+             else if(this.memmory[i]===this.symbols[3]){
+                let results = this.memmory[i-1]/this.memmory[i+1];
+                document.getElementById("display").innerHTML = results;
+                this.screenMemmory=results;
+                this.memmory.push(results);
+             }
+             
+        }
     }
 }

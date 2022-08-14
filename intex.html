@@ -4,10 +4,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="calci.css" type="text/css">
+    <link rel="stylesheet" href="intex.css" type="text/css">
     <script src="calci.js"></script>
 </head>
 <body>
+    <div class="full">
     <div class="main">
             <div id="display">
                
@@ -34,16 +35,17 @@
                 <button onclick="calci.btns(1)" class="btn">1</button>
                 <button onclick="calci.btns(2)" class="btn">2</button>
                 <button onclick="calci.btns(3)" class="btn">3</button>
-                <button onclick="calci.btnsym(calci.symbols([3]))" class="btn">x</button>
+                <button onclick="calci.btnsym(calci.symbols[2])" class="btn">*</button>
             </div>
             <div class="letters">
                 <button onclick="calci.btns(0)" class="btn">0</button>
                 <button onclick="calci.btns('.')" class="btn">.</button>
-                <button onclick="calci.btnsym(calci.symbols[2])" class="btn">%</button>
-                <button onclick="calci.btnsym(calci.symbols[4])" class="btn">=</button>
+                <button onclick="calci.btnsym(calci.symbols[3])" class="btn">%</button>
+                <button onclick="calci.result()" class="btn">=</button>
             </div>
         </div>
 
+    </div>
     </div>
 </body>
 </html>

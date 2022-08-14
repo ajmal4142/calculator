@@ -1,0 +1,25 @@
+.main{
+    width: 400px;
+    height: 600px;
+    border: solid black 1px;
+    background: gainsboro;
+    margin-left: 400px;
+}
+#display{
+    height: 85px;
+    margin: 20px;
+    border: solid 2px;
+    background: beige;
+}
+.btn{
+    width: 83px;
+    height: 70px;
+    font-size: x-large;
+}
+.letters{
+    margin-left: 30px;
+    margin-top: 11px;
+}
+.keys{
+    margin-top: 30px;
+}

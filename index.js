@@ -32,28 +32,31 @@ const calci={
         for(i=0;i<len;i++){
             if(this.memmory[i]===this.symbols[0]){
                let results =Number(this.memmory[i-1]) + Number(this.memmory[i+1]);
+               this.memmory[i+1]=results;
                document.getElementById("display").innerHTML = results;
                this.screenMemmory=results;
-               this.memmory.push(results);
             }
             else if(this.memmory[i]===this.symbols[1]){
                 let results = this.memmory[i-1]-this.memmory[i+1];
+                this.memmory[i+1]=results;
                 document.getElementById("display").innerHTML = results;
                 this.screenMemmory=results;
-                this.memmory.push(results);
+                
              }
              else if(this.memmory[i]===this.symbols[2]){
                 let results = this.memmory[i-1]*this.memmory[i+1];
+                this.memmory[i+1]=results;
                 document.getElementById("display").innerHTML = results;
                 this.screenMemmory=results;
-                this.memmory.push(results);
+                
              }
              else if(this.memmory[i]===this.symbols[3]){
                 let results = this.memmory[i-1]/this.memmory[i+1];
+                this.memmory[i+1]=results;
                 document.getElementById("display").innerHTML = results;
                 this.screenMemmory=results;
-                this.memmory.push(results);
              }
+
              
         }
     }

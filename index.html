@@ -3,20 +3,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CALCULATOR</title>
     <link rel="stylesheet" href="index.css" type="text/css">
     <script src="index.js"></script>
 </head>
 <body>
     <div class="full">
     <div class="main">
+        <p id="casio">CASIO</p>
             <div id="display">
                
             </div>
-            <hr style="margin-top: 29px;border-bottom-width: thick;">
+            <hr style="margin-top: 20px;border-bottom-width: thick;">
         <div class="keys">
-            <div class="letters" style="margin-left: 291px ">
-                <button onclick="calci.clear()" class="btn" style="background:darkgrey">C</button>
+            <div class="letters" style="margin-left: 297px ">
+                <button onclick="calci.clear()" class="btn" style="background:darkred">C</button>
             </div>
             <div class="letters">
                 <button onclick="calci.btns(7)" class="btn">7</button>
@@ -38,8 +39,8 @@
                 <button onclick="calci.btnsym(calci.symbols[2])" class="btn">*</button>
             </div>
             <div class="letters">
-                <button onclick="calci.btns(0)" class="btn">0</button>
                 <button onclick="calci.btns('.')" class="btn">.</button>
+                <button onclick="calci.btns(0)" class="btn">0</button>
                 <button onclick="calci.btnsym(calci.symbols[3])" class="btn">%</button>
                 <button onclick="calci.result()" class="btn">=</button>
             </div>

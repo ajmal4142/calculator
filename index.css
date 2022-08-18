@@ -27,6 +27,14 @@
     background: rgb(128,128,128);
     
 }
+.btns{
+    width: 91px;
+    height: 70px;
+    font-size: x-large;
+    cursor: pointer;
+    border-radius: 20px;
+    background: rgb(109, 96, 96);
+}
 .letters{
     margin-left: 12px;
     margin-top: 11px;

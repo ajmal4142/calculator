@@ -1,63 +1,66 @@
-const calci={
-    symbols: ['+','-','*','/'],
-    
-    memmory:[],
 
-    screenMemmory:'',
-
-    btns: function(numb){
-        document.getElementById("display").innerHTML += numb;
-        this.screenMemmory += ''+numb;
-        document.getElementById("display").innerHTML = this.screenMemmory;
-        
-    },
-
-    btnsym: function(symbol){
-        document.getElementById("display").innerHTML += symbol;
-        this.memmory.push(this.screenMemmory);
-        this.memmory.push(symbol);
-        this.screenMemmory='';
-        
-    },
-
-    clear : function(){
-        this.memmory = [];
-        this.screenMemmory = '';
-        document.getElementById("display").innerHTML = "";
-        
-    },
-    result : function(){
-        this.memmory.push(this.screenMemmory);
-        let len=this.memmory.length;
-        for(i=0;i<len;i++){
-            if(this.memmory[i]===this.symbols[0]){
-               let results =Number(this.memmory[i-1]) + Number(this.memmory[i+1]);
-               this.memmory[i+1]=results;
-               document.getElementById("display").innerHTML = results;
-               this.screenMemmory=results;
-            }
-            else if(this.memmory[i]===this.symbols[1]){
-                let results = this.memmory[i-1]-this.memmory[i+1];
-                this.memmory[i+1]=results;
-                document.getElementById("display").innerHTML = results;
-                this.screenMemmory=results;
-                
-             }
-             else if(this.memmory[i]===this.symbols[2]){
-                let results = this.memmory[i-1]*this.memmory[i+1];
-                this.memmory[i+1]=results;
-                document.getElementById("display").innerHTML = results;
-                this.screenMemmory=results;
-                
-             }
-             else if(this.memmory[i]===this.symbols[3]){
-                let results = this.memmory[i-1]/this.memmory[i+1];
-                this.memmory[i+1]=results;
-                document.getElementById("display").innerHTML = results;
-                this.screenMemmory=results;
-             }
-
-             
-        }
-    }
+  const symbols= ['+','-','x','%'];
+  let numb,results,memmory;
+ function btns(numbers){
+  numb=document.getElementById(numbers).innerHTML
+  document.getElementById("display").innerHTML += numb;
+  numb="";
+  console.log("numb",numb)
 }
+
+ function btnsym(symbol){
+  if (numb!==" + "&&numb!==" - "&&numb!==" x "&&numb!==" % "){
+      numb=document.getElementById(symbol).innerHTML;
+  document.getElementById("display").innerHTML += numb;
+  console.log("numb2",numb)
+  }
+ }
+function clearing(){
+     numb='';
+     document.getElementById("display").innerHTML = "";
+     
+ }
+function result(){
+  value=document.getElementById("display").innerHTML;
+  console.log("values",value)
+  memmory=value.split(" ");
+     
+     console.log('memm',memmory)
+
+     let len=memmory.length;
+     for(i=0;i<len;i++){
+         if(memmory[i]===symbols[0]){
+            results =parseFloat(memmory[i-1]) + parseFloat(memmory[i+1]);
+            memmory[i+1]=results;
+            document.getElementById("display").innerHTML = results;
+            console.log("result",results)
+            
+         }
+         else if(memmory[i]===symbols[1]){
+             results = memmory[i-1]-memmory[i+1];
+             memmory[i+1]=results;
+             document.getElementById("display").innerHTML = results;
+             screenMemmory=results;
+             
+          }
+          else if(memmory[i]===symbols[2]){
+             results = memmory[i-1]*memmory[i+1];
+            memmory[i+1]=results;
+             document.getElementById("display").innerHTML = results;
+             screenMemmory=results;
+             
+          }
+          else if(memmory[i]===symbols[3]){
+             results = memmory[i-1]/memmory[i+1];
+             memmory[i+1]=results;
+             document.getElementById("display").innerHTML = results;
+             screenMemmory=results;
+          }
+
+          
+     }
+ }
+
+
+
+ 

@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CALCULATOR</title>
-    <link rel="stylesheet" href="index.css" type="text/css">
-    <script src="index.js"></script>
+    <link rel="stylesheet" href="calculator.css" type="text/css">
+    <script src="calculator.js"></script>
 </head>
 <body>
     <div class="full">
@@ -17,7 +17,10 @@
             <hr style="margin-top: 20px;border-bottom-width: thick;">
         <div class="keys">
             <div class="letters" style="margin-left: 297px ">
-                <button onclick="clearing()" class="btn" style="background:rgb(102,0,51)">C</button>
+                <button onclick="btnsym(this.id)" id="power" class="btns"> ^ </button>
+                <button onclick="btnsym(this.id)" id="sqrt" class="btns"> √ </button>
+                <button onclick="btnsym(this.id)" id="factorial" class="btns"> ! </button>
+                <button onclick="clearing()" class="btn" id="clearing" style="background:rgb(102,0,51)">C</button>
             </div>
             <div class="letters">
                 <button onclick="btns(this.id)" id="7" class="btn">7</button>

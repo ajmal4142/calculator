@@ -1,10 +1,15 @@
+body{
+    margin: 0;
+    background: black;
+}
 .main{
     width: 400px;
     height: 600px;
     background:rgb(64,64,64);
-    margin-left: 400px;
+    margin-left: 480px;
+    margin-top: 18px;
     border-radius: 46px;
-    border: solid black 12px;
+    border: solid #ffffff 12px;
 }
 #display{
     font-family: cursive;
@@ -24,8 +29,9 @@
     font-size: x-large;
     cursor: pointer;
     border-radius: 20px;
-    background: rgb(128,128,128);
-    
+    background: rgb(128, 128, 128);
+    margin-left:3px;
+    color: #ffffff;
 }
 .btns{
     width: 91px;
@@ -34,45 +40,31 @@
     cursor: pointer;
     border-radius: 20px;
     background: rgb(109, 96, 96);
+    margin-left: 3px;
+    color: #ffffff;
+
 }
 .letters{
     margin-left: 12px;
-    margin-top: 11px;
-    
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
 }
 .keys{
-    margin-top: 92px;
-   
+    display: flex;
+    flex-direction: column;
 }
-.full{
-    background: blanchedalmond;
-    margin: 0;
+.full-web{
+    background: black;
+    margin: 0px;
+    width: 1370px;
+    height: 700px;
 }
+
 #casio{
     font-family: math;
     font-weight: bold;
     padding-left: 165px;
     font-size: x-large;
     color: oldlace;
-}
-#sqrt{
-    position: absolute;
-    bottom: 379px;
-    left: 619px;
-    font-weight: 1000;
-}
-#power{
-    position: absolute;
-    bottom: 380px;
-    left: 715px;
-}
-#clearing{
-    position: absolute;
-    bottom: 379px;
-    left: 430px;
-}
-#factorial{
-    position: absolute;
-    bottom: 379px;
-    left: 525px;
 }

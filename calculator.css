@@ -1,6 +1,8 @@
 body{
     margin: 0;
     background: black;
+    width: 1280px;
+    height: 650px;
 }
 .main{
     width: 400px;
@@ -67,4 +69,15 @@ body{
     padding-left: 165px;
     font-size: x-large;
     color: oldlace;
+}
+@media  screen and (max-width : 480px){
+    .main{
+       margin-left: 0;
+    }
+}
+@media  screen and (max-width : 767px){
+    .main{
+       margin-left: 130px;
+        
+    }
 }
